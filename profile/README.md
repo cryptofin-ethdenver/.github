@@ -1,4 +1,6 @@
 # DIING.xyz
+### Meet Diing!
+https://www.diing.xyz
 
 ## One-Sentence
 
@@ -7,8 +9,8 @@ Diing is a personal finance dApp that supports ZK-based magic links for token tr
 ---
 
 ## Git Repositories
-AWESOME SmartContracts: https://github.com/cryptofin-ethdenver/diing-contract
-<br>
+*CHECK HOW WE USED TRUFFLE & INFURA HERE*<br>
+AWESOME SmartContracts: https://github.com/cryptofin-ethdenver/diing-contract<br/>
 Price Crawler BE: https://github.com/cryptofin-ethdenver/diing-be
 
 ---
@@ -29,7 +31,7 @@ Communicating with people on Discord, Telegram, or Snapchat and asking for walle
 
 ## Target Users
 
-1. Community managers of Discord and Telegram groups who want to transfer tokens without asking for wallet addresses.
+1. Community managers of Discord and Telegram groups who want to transfer tokens without asking for wallet addresses.<br/>
 2. **Users who don't have a crypto wallet yet** and want to claim tokens using Diing's magic links.
 
 ## User Stories
