@@ -6,6 +6,13 @@ Diing is a personal finance dApp that supports ZK-based magic links for token tr
 
 ---
 
+## Git Repositories
+AWESOME SmartContracts: https://github.com/cryptofin-ethdenver/diing-contract
+<br>
+Price Crawler BE: https://github.com/cryptofin-ethdenver/diing-be
+
+---
+
 ## Summary
 
 Diing provides a magic link for token transfers, eliminating the need for users to ask for each other's wallet addresses. For example, if Alice, a community manager at Discord, wants to airdrop tokens to Bob, a holder of a crypto community, Alice can simply create a magic link in Diing and send it to Bob, who can then claim the token by clicking the link. The link is encrypted using ZK technology, ensuring privacy and security. Diing is also useful for onboarding people who don't have a crypto wallet yet.
@@ -28,14 +35,16 @@ Communicating with people on Discord, Telegram, or Snapchat and asking for walle
 ## User Stories
 
 ### **Sender**
-
-1. Connect the wallet and select the desired cryptocurrency.
-2. Set the amount and message, then create a magic link.
+<img src="./deposit.jpeg">
+1. Connect the wallet and select the desired cryptocurrency.<br/>
+2. Set the amount and message, then create a magic link.<br/>
 3. Share the link with the receiver.
 
-### **Receiver**
 
-1. Click the link sent by the sender on Discord or Telegram.
+
+### **Receiver**
+<img src="./withdraw.jpeg">
+1. Click the link sent by the sender on Discord or Telegram.<br/>
 2. Be redirected to Diing's interface and claim the tokens.
 
 ### Currencies
@@ -84,9 +93,8 @@ Diing eliminates the need to know the receiver's wallet address. Users can choos
     
     Cooperate with wallet providers to onboard more users to Diing.
 
-
-
-    ## Smart Contract Addresses
+## Smart Contract Addresses
+All networks are testnets. We supports 
 
 ### ETH
 
@@ -106,8 +114,8 @@ Diing eliminates the need to know the receiver's wallet address. Users can choos
 
 ### AURORA
 
-- DiingTransfer:
-- DiiingLoan:
+- DiingTransfer: 0x1D805ad4EC233960f97Ab3C870266447d49bd09eLOAN
+- DiiingLoan: 0x0bC539932E09E27A0434A13512Db21c377e0832f
 - USDC: 0x88801948C288c5Aea29fCb283564d3584D1643fa
 - USDT: 0xB30D9c09a8fdF7a8d937Cc68F2148B5257031797
 - MATIC: 0x8BC49BDb972f668380ac6c73480eb4534a6E8805
@@ -127,3 +135,23 @@ Diing eliminates the need to know the receiver's wallet address. Users can choos
 - USDC: 0x88801948C288c5Aea29fCb283564d3584D1643fa
 - USDT: 0xB30D9c09a8fdF7a8d937Cc68F2148B5257031797
 - MATIC: 0xae8130a68e2a58D9Fc819B3D17f882fC6D1d4e8e
+
+## Bounty & Challenges we ran into
+### 1. Truffle + Infura
+As we support several networks(Ethereum, Polygon Aurora, Base, Scroll), Truffle and Infura were great choice to manage multiple networks and RPCs
+### 2. Polygon
+MATIC amount supported by faucet is too limited. PolygonScan is a bit slow but useful. Other things were really satisfying.
+### 3. Base
+It's good that Faucet is Coinbase wallet, Mainnet ETH balance is necessary to claim. This point was inconvenient. But it was not a big problem cause we purchased our own ETH.
+### 4.Scroll
+Considering contract It was same as EVM. But our front end framework was Wagmi, Scroll didn’t support directly. So it took much more time for customizin
+### 5. Near Aurora
+We don't know the reason but network was too slow. We spent most of the time to make contract creation call.
+### 6. Cypher
+We tried a mobile connecting at the first time, Cypher doesn't support mile modal, So we connect Cypher's modal in web. The close button was disappeared at the token listing page, we've questioned cypher's discord and solved it.
+### 7. Spectral Finance
+Spectral supported partner API for credit score. We wereWe lack of the rate limit on the development process. Spectral Finance team supported more rate limit with 5000 requests.
+### 8. Huma Finance
+We support Huma Finance lending service for users who want to use in-service lending.
+### 9. Wallet connect
+Web3modal was great tool, but wallet addition was tricky. WAGMI was the easiest example so we changed stack once.
